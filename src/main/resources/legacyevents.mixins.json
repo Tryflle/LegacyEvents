@@ -1,0 +1,15 @@
+{
+  "compatibilityLevel": "JAVA_8",
+  "package": "me.tryfle.legacyevents.mixin",
+  "mixins": [
+    "EntityPlayerSPMixin",
+    "EntityRendererMixin",
+    "GuiConnectingMixin",
+    "GuiIngameMixin",
+    "GuiNewChatMixin",
+    "MinecraftMixin",
+    "NetworkManagerMixin",
+    "RenderLivingEntityMixin",
+    "WorldMixin"
+  ]
+}

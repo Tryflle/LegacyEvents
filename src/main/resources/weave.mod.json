@@ -1,0 +1,8 @@
+{
+  "mixinConfigs": [
+    "legacyevents.mixins.json"
+  ],
+  "entrypoints": [
+    "me.tryfle.legacyevents.Main"
+  ]
+}
