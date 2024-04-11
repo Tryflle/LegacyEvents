@@ -1,17 +1,17 @@
 plugins {
     kotlin("jvm") version "1.9.23"
-    id("net.weavemc.gradle") version "1.0.0-PRE"
+    id("net.weavemc.gradle") version "1.0.0-PRE2"
 }
 
 group = "me.tryfle"
 version = "1.0"
 
-minecraft {
+weave {
     configure {
-        name = "LegacyEvents"
-        modId = "legacyevents"
-        entryPoints = listOf("me.tryfle.legacyevents.Main")
-        mixinConfigs = listOf("legacyevents.mixins.json")
+        name = "njd"
+        modId = "njd"
+        entryPoints = listOf("me.tryfle.njd.Main")
+        hooks = listOf("me.tryfle.njd.hook.EntityLivingBaseHook", "me.tryfle.njd.hook.InitEventHook", "me.tryfle.njd.hook.ChatEventHook")
         mcpMappings()
     }
     version("1.8.9")
@@ -19,17 +19,14 @@ minecraft {
 
 repositories {
     mavenCentral()
-    maven("https://repo.spongepowered.org/maven")
     maven("https://repo.weavemc.dev/releases")
 }
 
 dependencies {
-    implementation("net.weavemc.api:common:1.0.0-PRE")
-    implementation("net.weavemc:internals:1.0.0-PRE")
-    compileOnly("org.spongepowered:mixin:0.8.5")
+    implementation("net.weavemc.api:common:1.0.0-PRE2")
+    implementation("net.weavemc:internals:1.0.0-PRE2")
 }
 
 kotlin {
     jvmToolchain(17)
 }
-

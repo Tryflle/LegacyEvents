@@ -52,8 +52,8 @@ public class MinecraftMixin {
 
     @Inject(method = "loadWorld(Lnet/minecraft/client/multiplayer/WorldClient;)V", at = @At("HEAD"))
     public void onLoadWorld(WorldClient a, CallbackInfo ci) {
-        if (a != null) EventBus.postEvent(new WorldEvent.Load(a));
-        if (a == null) EventBus.postEvent(new WorldEvent.Unload(null));
+        //if (a != null) EventBus.postEvent(new WorldEvent.Load(a));
+        //if (a == null) EventBus.postEvent(new WorldEvent.Unload(null));
     }
 
     @Inject(method = "shutdownMinecraftApplet", at = @At("HEAD"))
