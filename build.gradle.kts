@@ -1,4 +1,5 @@
 plugins {
+    `maven-publish`
     kotlin("jvm") version "1.9.23"
     id("net.weavemc.gradle") version "1.0.0-PRE2"
 }
@@ -30,6 +31,13 @@ dependencies {
 }
 
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(8)
 }
 
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
+        }
+    }
+}
