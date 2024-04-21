@@ -10,7 +10,7 @@ repositories {
 
 dependencies {
     // Add the dependency.
-    implementation("com.github.Tryflle:LegacyEvents:1.0.1")
+    implementation("com.github.Tryflle:LegacyEvents:1.0.2")
 }
 ```
 # Events
